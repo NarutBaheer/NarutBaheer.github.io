@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://narutbaheer.github.io/">
 <meta property="og:title" content="Baheer Noori">
-<meta property="og:description" content="IT support and systems. From Afghanistan to Qatar to Albany, NY. MS in Computer Science, University at Albany.">
+<meta property="og:description" content="IT support and systems. CompTIA A+ certified. From Afghanistan to Qatar to Albany, NY. MS in Computer Science, University at Albany.">
 <meta property="og:image" content="https://narutbaheer.github.io/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <title>Baheer Noori</title>
@@ -193,13 +193,19 @@ h1 em,h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400;lett
 .edu li{display:grid;gap:2px}
 .edu strong{font-weight:600;font-size:.96875rem}
 .edu span{color:var(--muted);font-size:.875rem}
-.cert-name{margin:16px 0 14px;font-size:1.375rem;font-weight:600;letter-spacing:-.02em}
+.cert-name{margin:16px 0 10px;font-size:1.375rem;font-weight:600;letter-spacing:-.02em}
+.cert-ok{display:inline-flex;align-items:center;gap:6px;margin:0 0 18px;padding:3px 11px 3px 8px;border-radius:999px;background:color-mix(in srgb, var(--ok) 15%, transparent);color:var(--ink);font-size:.8125rem;font-weight:600}
+.cert-ok svg.i{width:16px;height:16px;color:var(--ok)}
 .cert-track{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .seg{display:grid;gap:6px;font-size:.8125rem}
 .seg::before{content:"";height:6px;border-radius:999px;background:var(--line)}
 .seg.done::before{background:var(--ok)}
-.seg.doing::before{background:repeating-linear-gradient(-45deg, var(--accent) 0 5px, color-mix(in srgb, var(--accent) 40%, transparent) 5px 10px);background-size:28px 6px;animation:stripes 1.2s linear infinite}
-@keyframes stripes{to{background-position:14px 0}}
+.cert-dates{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.cert-dates div{display:grid;gap:2px}
+.cert-dates dt{font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cert-dates dd{margin:0;font-weight:600;font-size:.9375rem;font-variant-numeric:tabular-nums}
+.pills{display:flex;flex-wrap:wrap;gap:6px}
+.status svg.i{width:15px;height:15px;color:var(--ok)}
 .seg b{font-weight:600}
 .seg span{color:var(--muted)}
 
@@ -311,7 +317,10 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
     <div class="hero-top">
       <span class="avatar lg" id="portrait"><img src="img/portrait.jpg" alt="Portrait of Baheer Noori" width="96" height="96"></span>
       <div class="hero-meta">
-        <span class="status"><span class="pulse" aria-hidden="true"></span>Available for IT support &amp; systems roles</span>
+        <div class="pills">
+          <span class="status"><span class="pulse" aria-hidden="true"></span>Available for IT support &amp; systems roles</span>
+          <span class="status"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg>CompTIA A+ certified</span>
+        </div>
         <span class="clock" id="clock">Albany, NY</span>
       </div>
     </div>
@@ -466,10 +475,15 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
     <section class="card" aria-labelledby="cert-h">
       <p class="label">Certification</p>
       <h2 id="cert-h" class="h-sm cert-name">CompTIA A+</h2>
+      <p class="cert-ok"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>Certified</p>
       <div class="cert-track">
         <div class="seg done"><b>Core 1</b><span>Passed</span></div>
-        <div class="seg doing"><b>Core 2</b><span>In progress</span></div>
+        <div class="seg done"><b>Core 2</b><span>Passed</span></div>
       </div>
+      <dl class="cert-dates">
+        <div><dt>Earned</dt><dd>Oct 2026</dd></div>
+        <div><dt>Valid through</dt><dd>Oct 2029</dd></div>
+      </dl>
     </section>
   </div>
 
@@ -667,7 +681,7 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
   function goTo(id) { var el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); }
   var cmds = {
     help: function () { print('whoami     story      skills     projects\ncontact    ping       coffee     reboot\nsudo hire baheer      clear      exit'); },
-    whoami: function () { print('Baheer Noori. IT support and systems.\nMS Computer Science, University at Albany (May 2027).'); },
+    whoami: function () { print('Baheer Noori. IT support and systems.\nCompTIA A+ certified (2026).\nMS Computer Science, University at Albany (May 2027).'); },
     story: function () { print('Afghanistan > Qatar > Albany, NY.\nTaking you to the full story...'); setTimeout(function () { goTo('story'); }, 500); },
     skills: function () { print('Support:   Windows, macOS, Microsoft 365, networking basics\nCode:      C, SQL, PostgreSQL, Java\nSecurity:  access control, Row-Level Security, authentication'); },
     projects: function () { print('pg_abac               access control for PostgreSQL\nAdvanced Banking      team project built with Agile Scrum'); },
