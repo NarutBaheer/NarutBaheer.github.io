@@ -155,11 +155,6 @@ h1 em,h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400;lett
 .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .project{display:flex;flex-direction:column;padding:10px;transition:transform .2s ease}
 .project:hover{transform:translateY(-2px)}
-.work-stack{display:grid;gap:14px}
-.shot{position:relative;display:block;border-radius:var(--r-tile);overflow:hidden;border:1px solid var(--line);background:var(--soft);cursor:zoom-in}
-.shot img{display:block;width:100%;height:auto;max-width:100%;transition:transform .5s ease}
-.shot:hover img{transform:scale(1.015)}
-.featured .project-body p{max-width:40rem}
 .cover{min-height:200px;padding:18px;border-radius:var(--r-tile);background:var(--soft);display:grid;align-content:center}
 .project-body{display:flex;flex-direction:column;flex:1;padding:16px 12px 12px}
 .kicker{margin:0;font-family:var(--font-mono);font-size:.6875rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -392,19 +387,6 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
       <p class="label">Projects</p>
       <h2 id="work-h">Selected <em>work</em></h2>
     </div>
-    <div class="work-stack">
-    <article class="card project featured">
-      <a class="shot" href="projects/hr-dashboard/dashboard.jpg" target="_blank" rel="noopener">
-        <img src="projects/hr-dashboard/dashboard-960.jpg" srcset="projects/hr-dashboard/dashboard-960.jpg 960w, projects/hr-dashboard/dashboard.jpg 1742w" sizes="(max-width: 760px) 100vw, 736px" width="1742" height="979" loading="lazy" alt="HR Analytics Dashboard in Power BI showing 202 employees, years of service, job levels, promotion status, distance from the office, and a split of 124 men and 78 women">
-      </a>
-      <div class="project-body">
-        <p class="kicker">Data analytics &middot; Power BI</p>
-        <h3>HR Analytics Dashboard</h3>
-        <p>An interactive Power BI dashboard that gives an HR team a one-page view of a 202-person workforce. It shows years of service, job levels, promotion status, upcoming retrenchment, distance from the office, and the gender split, with buttons to move between its Home, Details, Action, and Question pages. I built it as a course project during my bachelor's.</p>
-        <ul class="chips" aria-label="Technologies"><li>Power BI</li><li>Data visualization</li><li>HR analytics</li><li>Dashboard design</li></ul>
-        <a class="more" href="projects/hr-dashboard/dashboard.jpg" target="_blank" rel="noopener">View the full dashboard <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
-      </div>
-    </article>
     <div class="grid-2">
       <article class="card project">
         <div class="cover" aria-hidden="true">
@@ -443,7 +425,6 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
           <a class="more" href="https://github.com/NarutBaheer/ScrumProject" target="_blank" rel="noopener">View on GitHub <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
       </article>
-    </div>
     </div>
   </section>
 
@@ -532,10 +513,6 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
       <div>
         <h3>Security focus</h3>
         <ul class="chips"><li>Access control</li><li>Row-Level Security</li><li>Authentication</li><li>Database security</li></ul>
-      </div>
-      <div>
-        <h3>Data &amp; analytics</h3>
-        <ul class="chips"><li>Power BI</li><li>Data visualization</li><li>Dashboard design</li></ul>
       </div>
       <div>
         <h3>Currently learning</h3>
@@ -748,8 +725,8 @@ footer{max-width:46rem;margin-inline:auto;display:flex;flex-wrap:wrap;align-item
     help: function () { print('whoami     story      skills     projects\ncontact    ping       coffee     reboot\nsudo hire baheer      clear      exit'); },
     whoami: function () { print('Baheer Noori. IT, software, and data.\nCompTIA A+ certified (2026).\nMS Computer Science, University at Albany (May 2027).'); },
     story: function () { print('Afghanistan > Qatar > Albany, NY.\nTaking you to the full story...'); setTimeout(function () { goTo('story'); }, 500); },
-    skills: function () { print('Support:   Windows, macOS, Microsoft 365, networking basics\nCode:      C, SQL, PostgreSQL, Java\nData:      Power BI, data visualization, dashboards\nSecurity:  access control, Row-Level Security, authentication'); },
-    projects: function () { print('HR Dashboard          workforce analytics in Power BI\npg_abac               access control for PostgreSQL\nAdvanced Banking      team project built with Agile Scrum'); },
+    skills: function () { print('Support:   Windows, macOS, Microsoft 365, networking basics\nCode:      C, SQL, PostgreSQL, Java\nSecurity:  access control, Row-Level Security, authentication'); },
+    projects: function () { print('pg_abac               access control for PostgreSQL\nAdvanced Banking      team project built with Agile Scrum'); },
     contact: function () { print('LinkedIn:  linkedin.com/in/baheer-noori-a9411b226\nGitHub:    github.com/NarutBaheer\nEmail:     use the Email me button below'); },
     ping: function () { print('PING baheer: 64 bytes, time<1ms'); print('Status: online and available for work.', 'good'); },
     coffee: function () { print("Error 418: I'm a teapot."); },
